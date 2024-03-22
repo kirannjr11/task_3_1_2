@@ -7,8 +7,8 @@
 </head>
 <body>
 <form th:method="post" th:action="@{/admin/gen}" th:object="${user}">
-    <label for="name">Enter name</label>
-    <input type="text" th:field="*{name}" id="name" required/>
+    <label for="firstName">Enter firstname</label>
+    <input type="text" th:field="*{firstName}" id="firstName" required/>
     <br/>
     <label for="lastName">Enter Lastname</label>
     <input type="text" th:field="*{lastName}" id="lastName" required/>

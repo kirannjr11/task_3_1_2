@@ -8,7 +8,7 @@
 <body>
 <div th:each="user : ${users}">
     <h1>
-        <a th:text="${user.getName}"></a>
+        <a th:text="${user.getFirstName()}"></a>
         <a th:text="${user.getLastName()}"></a>
         <a th:text="${user.getCountry()}"></a>
         <a th:text="${#strings.listJoin(user.roles, ', ')}"></a>
