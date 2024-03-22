@@ -23,7 +23,7 @@ public class User implements UserDetails {
     private Long id;
     @Column(unique = true)
 
-    private String name;
+    private String firstName;
     private String lastName;
     private String country;
     private String password;
@@ -33,8 +33,8 @@ public class User implements UserDetails {
                 inverseJoinColumns = {@JoinColumn(name = "roles_id")})
     private Set<Role> roles;
 
-    public User(@NonNull String name, String lastName, String country, @NonNull String password, @NonNull Set<Role> roles) {
-        this.name = name;
+    public User(@NonNull String firstName, String lastName, String country, @NonNull String password, @NonNull Set<Role> roles) {
+        this.firstName = firstName;
         this.lastName = lastName;
         this.country = country;
         this.password = password;
@@ -57,7 +57,7 @@ public class User implements UserDetails {
 
     @Override
     public String getUsername() {
-        return getName();
+        return getFirstName();
     }
 
     @Override
