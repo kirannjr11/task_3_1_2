@@ -16,16 +16,17 @@
     <form th:action="@{/admin/edit}">
         <button type="submit" th:name="id" th:value="${user.id}">Edit</button>
     </form>
+    <br/><br/>
     <form th:method="post" th:action="@{/admin/delete}">
         <button type="submit" th:name="id" th:value="${user.id}">Delete</button>
     </form>
-    <br/>
-    <hr/>
+    <br/><br/>
+
 </div>
-<br/>
-<hr/>
+
+
 <a href="/admin/new">Add new user</a>
-<br/>
+<br/><br/>
 <form th:action="@{/logout}" th:method="POST">
     <input type="submit" value="Logout" />
 </form>

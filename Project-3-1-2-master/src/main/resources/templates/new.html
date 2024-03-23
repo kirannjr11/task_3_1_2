@@ -9,16 +9,16 @@
 <form th:method="post" th:action="@{/admin/gen}" th:object="${user}">
     <label for="firstName">Enter firstname</label>
     <input type="text" th:field="*{firstName}" id="firstName" required/>
-    <br/>
+    <br/><br/>
     <label for="lastName">Enter Lastname</label>
     <input type="text" th:field="*{lastName}" id="lastName" required/>
-    <br/>
+    <br/><br/>
     <label for="country">Enter country</label>
     <input type="text" th:field="*{country}" id="country" required/>
-    <br/>
+    <br/><br/>
     <label for="password">Enter Password</label>
     <input type="text" th:field="*{password}" id="password" required/>
-    <br/>
+    <br/><br/>
     <label>Roles:
         <input type="checkbox" name="roles"
                th:each="role : ${roles}"
@@ -27,7 +27,7 @@
                th:field="*{roles}"
         />
     </label>
-    <br/>
+    <br/><br/>
     <input type="submit" value="add"/>
 </form>
 <br/>

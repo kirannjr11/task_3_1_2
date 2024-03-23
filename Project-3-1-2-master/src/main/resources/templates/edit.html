@@ -12,16 +12,16 @@
     </label>
     <label for="firstName">Enter firstname: </label>
     <input type="text" th:field="*{firstName}" id="firstName"/>
-    <br/>
+    <br/><br/>
     <label for="lastName">Enter lastname: </label>
     <input type="text" th:field="*{lastName}" id="lastName"/>
-    <br/>
+    <br/><br/>
     <label for="country">Enter country: </label>
     <input type="text" th:field="*{country}" id="country"/>
-    <br/>
+    <br/><br/>
     <label for="password">Enter password: </label>
     <input type="text" th:field="*{password}" id="password"/>
-    <br/>
+    <br/><br>
     <label>Roles:
         <input type="checkbox" name="roles"
                th:each="role : ${roles}"
@@ -30,9 +30,9 @@
                th:field="*{roles}"
         />
     </label>
-    <br/>
+    <br/><br/>
     <input type="submit" value="Update"/>
-    <br/>
+    <br/> <br/>
     <form th:action="@{/logout}" th:method="POST">
         <input type="submit" value="Logout" />
     </form>
